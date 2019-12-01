@@ -9,18 +9,18 @@ const messages = [{text: 'some text', owner: 'Fred'}, {text: 'other', owner: 'Ei
 app.use(bodyParser.json())
 app.use(cors({origin: 'http://localhost:4200'}));
 
-const api = express.Router();
+const apiRouter = express.Router();
 
-api.get('/messages', (req, res) => {
+apiRouter.get('/messages', (req, res) => {
   res.json(messages);
 });
 
-api.post('/message', (req, res) => {
+apiRouter.post('/messages', (req, res) => {
   messages.push(req.body);
   res.sendStatus(200);
 });
 
-app.use('/api', api);
+app.use('/api', apiRouter);
 
 app.listen(3000);
 
