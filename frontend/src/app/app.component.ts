@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MessagesComponent } from './messages.component';
 import { NewMessageComponent } from './new-message.component';
 
@@ -12,8 +12,9 @@ import { NewMessageComponent } from './new-message.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  @ViewChild(MessagesComponent, {static: true}) messages: MessagesComponent;
   onPosted(message) {
-    console.log(message);
+    this.messages.messages.push(message);
   }
   title = '"Team Log" Frontend';
 }
