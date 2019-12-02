@@ -9,7 +9,7 @@ body {
   background: lightgrey;
 }
 mat-card {
-  margin: 4px;
+  margin-top: 4px;
 }
 
 .new-message-container > * {
