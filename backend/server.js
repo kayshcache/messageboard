@@ -17,7 +17,7 @@ apiRouter.get('/messages', (req, res) => {
 
 apiRouter.post('/messages', (req, res) => {
   messages.push(req.body);
-  res.sendStatus(200);
+  res.json(req.body);
 });
 
 app.use('/api', apiRouter);
