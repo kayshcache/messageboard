@@ -7,6 +7,7 @@ import { MessagesComponent } from './messages.component';
 const appRoutes: Routes = [
   {path: '',         component: HomeComponent},
   {path: 'messages', component: MessagesComponent},
+  {path: 'messages/:name', component: MessagesComponent},
 ];
 
 @NgModule({

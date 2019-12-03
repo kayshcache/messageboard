@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-nav',
   template: `
     <mat-toolbar color="primary">
-      <button mat-button routerLink="/" color="accent">Message Board</button>
+      <button mat-button routerLink="/">Message Board</button>
       <button mat-button routerLink="/messages" color="accent">Messages</button>
     </mat-toolbar>
   `

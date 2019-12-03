@@ -15,3 +15,7 @@ mat-card {
 .new-message-container > * {
   width: 100%;
 }
+
+.link {
+  cursor: pointer;
+}
