@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'messages',
   template: `
-    <div *ngFor="let message of webService.messages">
+    <div *ngFor="let message of webService.messages | async">
       <mat-card>
         <mat-card-header>
           <mat-card-title [routerLink]="['/messages', message.owner]" class="link">{{message.owner}}</mat-card-title>
