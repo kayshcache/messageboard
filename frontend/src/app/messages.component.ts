@@ -20,6 +20,7 @@ import { ActivatedRoute } from '@angular/router';
 export class MessagesComponent {
   constructor(private webService: WebService, private route: ActivatedRoute) {}
   ngOnInit() {
-    console.log(this.route.snapshot.params.name);
+    const name = this.route.snapshot.params.name;
+    this.webService.getMessages(name);
   }
 }

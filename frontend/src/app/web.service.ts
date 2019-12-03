@@ -9,9 +9,10 @@ export class WebService {
   constructor(private http: HttpClient, private sb: MatSnackBar) {
     this.getMessages();
   }
-  async getMessages() {
+  async getMessages(user='') {
     try {
-      this.messages = await this.http.get(this.BASE_URL + '/messages')
+      user = (user) ? '/' + user : '';
+      this.messages = await this.http.get(this.BASE_URL + '/messages' + user)
         .toPromise() as any[];
     } catch (err) {
       this.handleError(err);

@@ -15,6 +15,13 @@ apiRouter.get('/messages', (req, res) => {
   res.json(messages);
 });
 
+apiRouter.get('/messages/:user', (req, res) => {
+  const user = req.params.user;
+  const result = messages.filter(message => message.owner == user);
+
+  res.json(result);
+});
+
 apiRouter.post('/messages', (req, res) => {
   messages.push(req.body);
   res.json(req.body);
