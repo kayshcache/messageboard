@@ -19,3 +19,7 @@ mat-card {
 .link {
   cursor: pointer;
 }
+
+#register-form mat-form-field {
+  width: 350px;
+}

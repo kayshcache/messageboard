@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,13 +19,15 @@ import { WebService } from './web.service';
 import { MessagesComponent } from './messages.component';
 import { NewMessageComponent } from './new-message.component';
 import { NavComponent } from './nav.component';
+import { RegisterComponent } from './register.component';
 
 @NgModule({
   declarations: [
-    AppComponent, MessagesComponent, NewMessageComponent, NavComponent, HomeComponent
+    AppComponent, MessagesComponent, NewMessageComponent,
+    NavComponent, HomeComponent, RegisterComponent,
   ],
   imports: [
-    BrowserModule, MatButtonModule, MatInputModule,
+    BrowserModule, MatButtonModule, MatInputModule, ReactiveFormsModule,
     AppRoutingModule, MatCardModule, FormsModule, MatToolbarModule,
     BrowserAnimationsModule, HttpClientModule, MatSnackBarModule,
   ],
