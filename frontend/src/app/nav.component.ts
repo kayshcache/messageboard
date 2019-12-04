@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-nav',
   template: `
     <mat-toolbar color="primary">
-      <button mat-button routerLink="/">Message Board</button>
-      <button mat-button routerLink="/messages" color="accent">Messages</button>
-      <button mat-button routerLink="/register" color="accent">Register</button>
+      <a mat-button routerLink="/">Message Board</a>
+      <a mat-button routerLink="/messages">Messages</a>
+      <a mat-button routerLink="/register">Register</a>
+      <a mat-button routerLink="/register">Welcome {{auth.name}}</a>
     </mat-toolbar>
   `
 })
 export class NavComponent {
-  constructor() {}
+  constructor(private auth: AuthService) {}
 }
