@@ -14,8 +14,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 // Apps own custom components
-import { HomeComponent } from './home.component';
 import { WebService } from './web.service';
+import { AuthService } from './auth.service';
+import { HomeComponent } from './home.component';
 import { MessagesComponent } from './messages.component';
 import { NewMessageComponent } from './new-message.component';
 import { NavComponent } from './nav.component';
@@ -31,7 +32,7 @@ import { RegisterComponent } from './register.component';
     AppRoutingModule, MatCardModule, FormsModule, MatToolbarModule,
     BrowserAnimationsModule, HttpClientModule, MatSnackBarModule,
   ],
-  providers: [ WebService ],
+  providers: [ WebService, AuthService, ],
   bootstrap: [AppComponent]
 })
 
